@@ -15,7 +15,7 @@ Every mathematician knows this man's name, and are either familiar with his work
 - Algebraic Geometry: Grothendieck
 - Physics: Paul Dirac
 - Computer Science: Alonzo Church
-- Programming Lanuguages: John McCarthy
+- Programming Languages: John McCarthy
 
 An anecdote to support the point: Grothendieck's obituary ran in the New York Times, and, eventually, the academic journal Nature. His friend David Mumford's first attempt at an obituary was *rejected* by Nature:
 
@@ -173,9 +173,9 @@ def execute(self, i: Instruction):
     source = self.stacks[i.source]
     destination = self.stacks[i.destination]
     # Slice off the end segment of the source
-    payload = source[len(source) - i.count:]
+    payload = source[-i.count:]
     # Modify the source and desintation
-    self.stacks[i.source] = source[:i.count]
+    self.stacks[i.source] = source[:-i.count]
     self.stacks[i.destination] = destination + payload
 ```
 
@@ -183,9 +183,37 @@ There's very little choice in how we write this method, *and that's a good thing
 
 As programmer's, we're accustomed to thinking our unique skill is in writing *code*, I suspect Grothendieck would claim the true path is in modeling the problem skillfully with *data structures*. If the data structures are well chosen, the code follows without effort.
 
-## Final Remarks
+## The Darkness
 This approach does not work equally well for all problems, indeed, sometimes the code one must write is essentially and irreducibly hard.
+
+Consider the string parsing needed to read the string representation of the stacks into our data structure, here's the code I wrote in 2022 to do that:
+
+```python
+def parse_stacks(stackstr: Iterable[str]) -> Stacks:
+    stackstrs = list(stackitr)[:-1]
+    stacks: Stacks = Stacks([[] for _ in range(N_STACKS)])
+    for line in stackstrs[::-1]:
+        tokens = [
+            ''.join(x for _, x in g[1])
+            for g in groupby(
+                enumerate(line),
+                lambda t: t[0] // N_CHARS_IN_BOX_TOKEN
+            )
+        ]
+        boxes: List[Box] = [t.strip('[] ') for t in tokens]
+        for box, stack in zip(boxes, stacks.iter_stacks()):
+            if box: stack.append(box)
+    return stacks
+```
+
+This is awful and impenetrable, but I'm unsure if it can be any other way. String parsing like this seems like the sort of task that is irreducibly complicated. The best we can do is isolate this bit from the more organized part of our program, and test it thoroughly enough to rely on its correctness.
+
+I've found this a common pattern in Advent of Code puzzles, parsing the input is often irredeemably messy, but once the data is organized into clean data structures, the second half can be completed cleanly and transparently.
+
+I've seen this described as an on onion. The shitty stuff should happen on the outside layer of your program, that interacts with the "outside world". Once it's inside, organize it into nice data structures so that operations (i.e. code) are as self evident as possible.
+
+## Closing Remarks
 
 ![Grothendieck as an Wizard](/img/grothendieck-wizard.png)
 
-This reality eventually came for Grothendieck. His mathematical life's work was all aimed towards a proof of the *Weil Conjectures*, of which there are three. The first two fell two his methods. The final did *not*, and remained for his student Deligne to overcome. To Grothendieck's disappointment, this last conjecture has never fallen to his approach, it required clever and difficult analysis, and still does.
+This messy reality eventually came for Grothendieck. His mathematical life's work was all aimed towards a proof of the *Weil Conjectures*, of which there are three. The first two fell two his methods. The final did *not*, and remained for his student Deligne to overcome. To Grothendieck's disappointment, this last conjecture has never fallen to his approach, it required clever and difficult analysis, and still does.
