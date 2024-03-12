@@ -17,33 +17,35 @@ Every mathematician knows this man's name, and are either familiar with his work
 - Computer Science: Alonzo Church
 - Programming Lanuguages: John McCarthy
 
-An anecdote to support the point: Grothendieck's obituary ran in the New York Times, and, eventually, the academic journal Nature. In fact, his friend David Mumford's obituary was *rejected* by Nature:
+An anecdote to support the point: Grothendieck's obituary ran in the New York Times, and, eventually, the academic journal Nature. His friend David Mumford's first attempt at an obituary was *rejected* by Nature:
 
 > The sad thing is that this was rejected as much too technical for their readership. Their editor wrote me that 'higher degree polynomials', 'infinitesimal vectors' and 'complex space' (even complex numbers) were things at least half their readership had never come across.
 
-To give some sense of Grothendieck's personality, this is note he left in the guestbook of a coffee shop frequented by himself and colleagues in Paris:
+A note Grothendieck left in the guestbook of a coffee shop frequented by his mathematical colleagues give a sense of his personality:
 
 ![Grotheniek's Riemann-Roch Note](/img/grothendieck-riemann-roch.jpg)
 
 A rough translation taken from Reddit:
 
 > Witch's Kitchen 1971
+
 > Riemann-Roch: The latest craze: The diagram [...] is commutative.
-> In order to give this statement about f:x -> y an approximate meaning, I had to abuse the audience's patience for nearly two hours. In black and white (in Springer's Lecture Notes) it seems to take up to 400 or 500 pages. A thrilling example for how our urge of knowledge and discovery plays itself out more and more in a logical delirium that is enraptured from life, while life itself goes to hell in a thousand ways - and is threatened by final annihilation. It's high time to change our course!
+
+> In order to give this statement about f:x → y an approximate meaning, I had to abuse the audience's patience for nearly two hours. In black and white (in Springer's Lecture Notes) it seems to take up to 400 or 500 pages. A thrilling example for how our urge of knowledge and discovery plays itself out more and more in a logical delirium that is enraptured from life, while life itself goes to hell in a thousand ways - and is threatened by final annihilation. It's high time to change our course!
 
 ## The Rising Sea
 
-My goal is not to discuss Grothendieck, or his work, which would be quite impossible. I'd like to discuss Grothendieck's philosophy and approach to problem solving (which in mathematics, is the proving of mathematical theorems). He used the analogy of a rising sea:
+My goal is not so much to discuss Grothendieck, or his work, which would be quite impossible. I'd like to discuss Grothendieck's philosophy and approach to problem solving (which in mathematics, is the proving of mathematical theorems). He used the analogy of a rising sea:
 
 > A different image came to me a few weeks ago. The unknown thing to be known appeared to me as some stretch of earth or hard marl, resisting penetration...  the sea advances insensibly in silence, nothing seems to happen, nothing moves, the water is so far off you hardly hear it... yet it finally surrounds the resistant substance...
 
-To Grothendeck, problems are not best solved by strenuous effort, but by the gradual building of structure and theory, until the problem no longer resists, and it is only necessary to observe that there is no longer any problem at all.
+To Grothendeck, problems are not best solved by strenuous effort, but by the gradual building of structure and theory. Eventually, the problem no longer resists, and it is only necessary to observe that there is no longer any problem remiaining at all.
 
-His friend and student Pierre Deligne:
+His friend and student Pierre Deligne gives another angle:
 
 > I have also learned not to take glory in the difficulty of a proof: difficulty means we have not understood. The ideal is to be able to paint a landscape in which the proof is obvious.
 
-In contrast, his contemporary Jean Paul Serre took the opposite approach, seeking the most direct attack on any problem he faced. Grothendieck wrote extremely long and detailed cathedrals of theory, Serre wrote short works that are marvels of elegance and concision.
+In contrast, his contemporary Jean Paul Serre took the opposite approach, seeking the most direct attack on any problem faced. Grothendieck wrote extremely long and detailed cathedrals of theory, Serre wrote short works that are marvels of elegance and concision.
 
 Which would have made the better programmer?
 
