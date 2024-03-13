@@ -4,7 +4,7 @@
 
 Day 5, 2022: https://adventofcode.com/2022/day/5
 
-## On Grothendiek
+## Grothendiek
 
 Alexandre Grothendieck: 1928–2014
 Michael Artin, Allyn Jackson, David Mumford, and John Tate, Coordinating Editors
@@ -37,5 +37,11 @@ German -> English Translation of Grothendiek's Note,
 ## Images
 Pictures of Grothendiek from "The Anarchist Abstractionist", linked above.
 
+Picture of Serre from Twitter:
+https://twitter.com/claudinemonteil/status/909010764131954688
+
 Picture of Grothendieck's note from wikipedia:
 https://en.wikipedia.org/wiki/Grothendieck%E2%80%93Riemann%E2%80%93Roch_theorem
+
+Picture of danylion tea from:
+https://egertronpuck.weebly.com/from-a-crypto-artist/the-dandy-lion-make-a-wish
