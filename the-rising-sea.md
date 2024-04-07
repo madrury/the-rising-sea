@@ -1,6 +1,6 @@
 # The Rising Sea
 
-I'd like to say something tonight about problem solving, themed around a semi-famous metaphor.
+I'd like to say something tonight about problem solving, themed around a semi-famous problem solver, and his metaphor.
 
 ## Grothendieck
 
@@ -8,7 +8,7 @@ This young man is one of those sorts of people that is legendary within a very p
 
 ![Grothendieck 1951](/img/grothendieck-young.png)
 
-This man is Alexander Grothendieck, a revolutionary Mathematician. His work in the 1960's and 1970's changed the course of pure mathematics research in multiple fields.
+This is Alexander Grothendieck, a revolutionary Mathematician. His work in the 1950's through the 1970's changed the course of pure mathematics research in multiple fields.
 
 Every mathematician knows this man's name, and are either familiar with his work, or familiar with how familiar some of their peers are with his work.
 
@@ -24,6 +24,8 @@ Each of these individuals is not the most well known figure in their fields: in 
 Another anecdote to support the point: Grothendieck's obituary ran in the New York Times, and, eventually, the academic journal Nature. His friend David Mumford's first attempt at an obituary was *rejected* by Nature:
 
 > The sad thing is that this was rejected as much too technical for their readership. Their editor wrote me that 'higher degree polynomials', 'infinitesimal vectors' and 'complex space' (even complex numbers) were things at least half their readership had never come across.
+
+This may give some sense of the depth and diffculty of Grothendieck's work, and justifies (a little) the absense of discussion here of what Grothendieck accomplished in mathematics.
 
 A note Grothendieck left in the guestbook of a coffee shop frequented by his mathematical colleagues give a sense of his personality:
 
@@ -49,9 +51,13 @@ His friend and student Pierre Deligne gives another angle:
 
 > I have also learned not to take glory in the difficulty of a proof: difficulty means we have not understood. The ideal is to be able to paint a landscape in which the proof is obvious.
 
+## The Rising Sea
+
 In contrast, his contemporary Jean Paul Serre took the opposite approach, seeking the most direct attack on any problem faced. Grothendieck wrote extremely long and detailed cathedrals of theory, Serre wrote short works that are marvels of elegance and concision.
 
-Which would have made the better programmer?
+Serre is well known to Mathematicians for his legendary texbooks. The most well known of which is his "Course in Arithmetic", a short yet remarkably wide ranging and deep work on modern Number Theory. The title is a mistranslation, it's very much *not* about arithmetic as the layperson would understnd it. In my opinion, the mistake in translation is a charming one.
+
+We consider the question: which approach leads to better computer programs?
 
 ## An Example: Advent of Code 2022, Problem 5
 
@@ -187,7 +193,7 @@ class Stack:
     def popsome(self, count: int) -> List[Box]:
         tail = self.boxes[-count:]
         self.boxes = self.boxes[:-count]
-        return self.tail
+        return tail
     def extend(self, some: List[Box]):
         self.boxes.extend(some)
 ```
