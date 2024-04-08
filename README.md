@@ -1,5 +1,5 @@
 # The Rising Sea
-My talk at the PuPPy March 2023 talk night, and PyCascades 2024.
+My talk at the PuPPy March 2024 talk night, and PyCascades 2024.
 
 ## Abstract
 We discuss the pleasure of problem solving by dissolution.
